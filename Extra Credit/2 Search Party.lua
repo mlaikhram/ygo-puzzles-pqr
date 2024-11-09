@@ -35,7 +35,7 @@ Debug.AddCard(33420078,0,0,LOCATION_GRAVE,0,POS_FACEUP)
 --Monster Zones (yours)
 Debug.AddCard(44519536,0,0,LOCATION_MZONE,2,POS_FACEUP_DEFENSE,true)
 Debug.AddCard(49036338,0,0,LOCATION_MZONE,1,POS_FACEUP_ATTACK,true)
-Debug.AddCard(89312388,0,0,LOCATION_MZONE,0,POS_FACEUP_ATTACK,true)
+local fc_target = Debug.AddCard(89312388,0,0,LOCATION_MZONE,0,POS_FACEUP_ATTACK,true)
 
 --Spell & Trap Zones (yours)
 Debug.AddCard(10719350,0,0,LOCATION_SZONE,1,POS_FACEUP)
@@ -60,6 +60,9 @@ Debug.AddCard(21615956,1,1,LOCATION_MZONE,1,POS_FACEUP_DEFENSE,true)
 
 --Spell & Trap Zones (opponent's)
 Debug.AddCard(65681983,1,1,LOCATION_SZONE,1,POS_FACEDOWN)
+local fc = Debug.AddCard(50078509,1,1,LOCATION_SZONE,2,POS_FACEUP)
 
 Debug.ReloadFieldEnd()
+Debug.PreSetTarget(fc, fc_target)
+
 aux.BeginPuzzle()
